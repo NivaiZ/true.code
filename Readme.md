@@ -1,6 +1,6 @@
-## Тестовое задание для ПрограмЛаб
+## Тестовое задание для True.code
 
-[Демо проекта](https://nivaiz.github.io/ProgramLab/build/)
+[Демо проекта](https://nivaiz.github.io/true.code/build/index.html)
 
 Вёрстка: [Илья Галятдинов](https://github.com/NivaiZ/)
 
