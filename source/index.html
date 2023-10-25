@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>True.code</title>
+    <meta name="description" content="Тестовое задание для true.code" />
+    <meta name="keywords" content="true.code" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="body">
+    <header class="header container">
+      <nav class="menu">
+        <div class="menu__block">
+          <a class="menu__logo">
+            <svg class="search__svg" width="100" height="36">
+              <use xlink:href="./img/sprite.svg#logo__header"></use>
+            </svg>
+          </a>
+        </div>
+
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="/" class="menu__link">О марсе</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="/" class="menu__link">Процесс</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="/" class="menu__link">Билеты</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="/" class="menu__link">Новости</a>
+          </li>
+
+          <li class="menu__item">
+            <a href="/" class="menu__link">Контакты</a>
+          </li>
+
+          <li class="menu__item">
+            <button class="menu__popup" type="button">
+              <span class="menu__sign">Купить билеты</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="burger-menu">
+        <nav class="burger-menu__nav">
+          <ul class="burger-menu__list">
+            <li class="burger-menu__item">
+              <a class="menu__logo">
+                <svg class="search__svg" width="100" height="36">
+                  <use xlink:href="./img/sprite.svg#logo__header"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="burger-menu__item">
+              <button class="burger-menu__button" type="button">
+                <span class="burger-menu__toggle"></span>
+              </button>
+            </li>
+          </ul>
+
+          <ul class="menu__list menu__list--mobile" aria-menu="burger-menu">
+            <li class="menu__item">
+              <a href="/" class="menu__link">О марсе</a>
+            </li>
+
+            <li class="menu__item">
+              <a href="/" class="menu__link">Процесс</a>
+            </li>
+
+            <li class="menu__item">
+              <a href="/" class="menu__link">Билеты</a>
+            </li>
+
+            <li class="menu__item">
+              <a href="/" class="menu__link">Новости</a>
+            </li>
+
+            <li class="menu__item">
+              <a href="/" class="menu__link">Контакты</a>
+            </li>
+
+            <li class="menu__item">
+              <button class="menu__popup" type="button">
+                <span class="menu__sign">Купить билеты</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__background"></div>
+      <section class="slider">
+        <div class="container slider__wrapper">
+          <h1 class="slider__heading">Точка назначения:</h1>
+          <ul class="slider__list">
+            <li class="slider__item slider__animation">
+              <span class="slider__circle"></span>
+              <span class="slider__line slider__line--animation"></span>
+              <span class="slider__circle slider__circle--bottom"></span>
+            </li>
+
+            <li class="slider__item slider__position">
+              <video
+                class="slider__video"
+                src="video/mars.mp4"
+                muted
+                loop
+                autoplay
+              ></video>
+              <svg class="clip-path-svg">
+                <defs>
+                  <clipPath
+                    id="clip-mars"
+                    clipPathUnits="objectBoundingBox"
+                    transform="scale(0.0005208333333333333, 0.000925925925925926)"
+                  >
+                    <path
+                      d="M0,14.91H182L263.12,762h2.31l81.13-747.1h182V1058.77H408V268.38h-2.33L313,1058.77H206.31L113.59,268.38h-2.31v790.39H0Z"
+                    />
+                    <path
+                      d="M722.11,14.91H894.82L1027,1058.77H899.45L876.27,851.49v3H731.38l-23.18,204.3H590ZM861.2,712.81l-56.75-516h-2.33l-55.67,516Z"
+                    />
+                    <path
+                      d="M1088.36,14.91h187.78q95,0,142.57,65.61t47.53,192.35V375.76q0,126.76-47.53,192.37t-142.57,65.64h-60.27v425H1088.36Zm187.78,469.74q31.29,0,46.94-22.37t15.65-76V262.46q0-53.7-15.65-76.06T1276.14,164h-60.27V484.65Z"
+                    />
+                    <path
+                      d="M1575.76,1006.57q-48.12-67.1-48.11-189.38V256.49q0-122.27,48.11-189.38T1715.42,0Q1807,0,1855.09,67.11t48.1,189.38V366.83H1782.65V246.05q0-96.92-63.75-96.93t-63.75,96.93V829.12q0,95.45,63.75,95.45t63.75-95.45V669.56h120.54V817.19q0,122.29-48.1,189.38t-139.67,67.11Q1623.84,1073.68,1575.76,1006.57Z"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="form">
+        <div class="container form__wrapper">
+          <ul class="form__list form__list--flex">
+            <li class="form__item form__item--flex">
+              <h2 class="form__heading">
+                Бронирование <br />
+                билетов
+              </h2>
+            </li>
+
+            <li class="form__item form__item--flex">
+              <button class="form__button" type="button">
+              </button>
+            </li>
+          </ul>
+
+          <form
+            class="form__block"
+            method="post"
+            action="https://echo.htmlacademy.ru"
+          >
+            <ul class="form__list">
+              <li class="form__item form__item--column">
+                <label
+                  class="form__date form__date--arrival"
+                  for="date__arrival"
+                  >Дата заезда</label
+                >
+                <input
+                  class="form__input"
+                  type="date"
+                  placeholder="13.05.2021"
+                  id="date__arrival"
+                  name="date-arrival"
+                  min="2023-09-22"
+                  required
+                />
+              </li>
+
+              <li class="form__item form__item--column">
+                <label
+                  class="form__date form__date--departure"
+                  for="date__departure"
+                  >Дата выезда</label
+                >
+                <input
+                  class="form__input"
+                  type="date"
+                  placeholder="13.05.2021"
+                  id="date__departure"
+                  name="date-departure"
+                  min="2023-09-22"
+                  required
+                />
+              </li>
+
+              <li class="form__item form__item--column">
+                <label
+                  class="form__date form__date--departure"
+                  for="date__amount"
+                  >Количество</label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  placeholder="1 человек"
+                  id="date__amount"
+                  name="date__amount"
+                  min="1"
+                  required
+                />
+                <button class="form__send" type="send">
+                  <span class="form__sign">Купить билеты</span>
+                </button>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: @font;
+  overflow-x: hidden;
+
+  @media (max-width: 1250px) {
+    overflow-x: unset;
+  }
+
+  &::before {
+    content: "";
+    background-image: url("../img/perls__noise.png");
+    position: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: width 8s ease-out 2s infinite;
+    z-index: 1;
+  }
+}
+
+.body__scroll {
+  overflow-y: hidden;
+}

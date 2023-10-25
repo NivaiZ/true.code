@@ -1,0 +1,125 @@
+.burger-menu__button {
+  justify-content: center;
+  user-select: none;
+  margin: 0;
+  border-radius: 0;
+  font-size: 0;
+  line-height: 0;
+  outline: 0;
+  cursor: pointer;
+  box-sizing: content-box;
+  width: auto;
+  padding: 10px;
+  padding-right: 0;
+  background: 0 0;
+  border: 0;
+
+  @media (min-width: 1250px) {
+    display: none;
+  }
+}
+
+.burger-menu {
+  display: flex;
+  position: relative;
+
+  @media (min-width: 1250px) {
+    display: none;
+  }
+
+  .menu__list {
+    left: 100%;
+    display: none;
+  }
+
+  .menu__list--open {
+    display: block;
+    height: unset;
+    left: 0;
+    overflow: unset;
+    transition: left 0.5s ease;
+    opacity: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    position: absolute;
+    background-color: @basic-white;
+    width: 100%;
+
+    .menu__item {
+      padding: 20px;
+    }
+  }
+}
+
+.burger-menu__list {
+  padding: 30px 16px 0 16px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1250px) {
+    width: 100%;
+  }
+}
+
+.burger-menu__toggle {
+  position: relative;
+  display: inline-block;
+  width: 26px;
+  height: 2px;
+  vertical-align: bottom;
+  transition: background 0.7s 0.7s;
+  background-color: @basic-red;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: @basic-red;
+    transition: top 0.5s 0.5s, transform 0.5s, -webkit-transform 0.5s;
+    transform-origin: 50% 50%;
+  }
+
+  &::before {
+    top: 8px;
+  }
+
+  &::after {
+    top: -8px;
+  }
+}
+
+.burger-menu__burger--open .burger-menu__toggle {
+  background: 0 0;
+  transition: background 0.1s 0.1s;
+  z-index: 6;
+
+  &::after,
+  &::before {
+    transition: top 0.3s, transform 0.3s 0.5s;
+    width: 28px;
+    top: 0;
+    left: -5px;
+  }
+
+  &::before {
+    transform: rotate3d(0, 0, 1, 45deg);
+    background-color: @basic-red;
+  }
+
+  &::after {
+    transform: rotate3d(0, 0, 1, -45deg);
+    background-color: @basic-red;
+  }
+}
+
+.burger-menu__nav {
+  @media (max-width: 1250px) {
+    display: block;
+    width: 100%;
+  }
+}
